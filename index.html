@@ -11,7 +11,40 @@
             width: 1366px;
             height: 1024px;
         }
-    
+        div.fangxiang {
+            width: 195px;
+            height: 234px;
+            border: dashed #66a9c9;
+        }
+
+        div#xiaopen {
+            width: 93px;
+            height: 93px;
+            border: dashed #66a9c9;
+            
+        }
+        div.danqi {
+            width: 93px;
+            height: 93px;
+            border: dashed #e4bf11;
+        }
+        div#piaoyi {
+            width: 317px;
+            height: 317px;
+            border: dashed #a11048;
+        }
+        div#shache {
+            width: 130px;
+            height: 130px;
+            border: dashed #baa1ec;
+        }
+        div#ecu {
+            width: 100px;
+            height: 100px;
+            border: dashed #7e2065;
+        }
+        
+        
     
     </style>    
 </head>
@@ -23,19 +56,69 @@
         <img src="https://raw.githubusercontent.com/parkshinhye/parkshinhye.github.io/main/bg.jpg" alt="QQ飞车游戏手速测试 流星键位 2.0" width="1366" height="1024">
     </div>
 
-    <div id="zuo"></div>
-    <div id="you"></div>
+    <div id="zuo" class="fangxiang">左</div>
+    <div id="you" class="fangxiang">右</div>
 
-    
+    <div id="xiaopen">小喷</div>
+    <div id="danqizuo" class="danqi">左氮气</div>
+    <div id="danqiyou" class="danqi">右氮气</div>
+
+    <div id="piaoyi">飘逸</div>
+    <div id="shache">刹车</div>
+    <div id="ecu">ECU</div>
+
     <script>
 
-var date = new Date();
+       
 
-        $("#bgim1").onClick(function () {
+        var _piaoyi=[]
+        var _shache=[]
+        var _zuo=[]
+        var _you=[] 
+        var _xiaopen=[]
+        var _ecu=[]
 
-            console.log(date.now());
-            console.log(date.parse(new Date()));
+        var _danqizuo=[]
+        var _danqiyou=[]
+
+        $("div#zuo.fangxiang").click(function (e) {
+            _zuo.push(e.timeStamp)
         });
+        $("div#you.fangxiang").click(function (e) {
+            _you.push(e.timeStamp)
+        });
+        
+        $("#xiaopen").click(function (e) {
+            _xiaopen.push(e.timeStamp)
+        });
+
+        $("div#danqizuo").click(function (e) {
+            _danqizuo=push(e.timeStamp)
+        });
+        $("div#danqiyou").click(function (e) {
+            _danqiyou=push(e.timeStamp)
+        });
+        $("#piaoyi").click(function (e) {
+            _piaoyi.push(e.timeStamp)
+        });
+        $("#shache").click(function (e) {
+            _shache.push(e.timeStamp)
+        });
+        $("#ecu").click(function (e) {
+            _ecu.push(e.timeStamp)
+        });
+
+        var datas={
+            danqizuo:_danqizuo,
+            danqiyou:_danqiyou,
+            piaoyi:_piaoyi,
+            shache:_shache,
+            zuo:_zuo,
+            you:_you,
+            xiaopen:_xiaopen,
+            ecu:_ecu
+        }
+
     </script>
 </body>
 </html>
