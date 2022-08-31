@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QQ飞车游戏手速测试 流星键位 2.0</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+        div#bgim1 {
+            width: 1366px;
+            height: 1024px;
+        }
+    
+    
+    </style>    
 </head>
-<style>
-    div#bgim1 {
-        width: 1366px;
-        height: 1024px;
-    }
-
-
-</style>
 
 <body>
     <h1>QQ飞车游戏手速测试 流星键位 2.0</h1>
@@ -22,7 +23,14 @@
         <img src="https://raw.githubusercontent.com/parkshinhye/parkshinhye.github.io/main/bg.jpg" alt="QQ飞车游戏手速测试 流星键位 2.0" width="1366" height="1024">
     </div>
 
+    <div id="zuo"></div>
+    <div id="you"></div>
 
-
+    
+    <script>
+        $("#bgim1").click(function (events) {
+            console.log(events)
+        });
+    </script>
 </body>
 </html>
