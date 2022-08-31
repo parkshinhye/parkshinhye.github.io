@@ -78,14 +78,11 @@
         var _xiaopen=[]
         var _ecu=[]
 
-        var _danqizuo=[]
-        var _danqiyou=[]
+        var _dzuo= [];
+        var _dyou= [];
 
         $("div#zuo.fangxiang").click(function (e) {
             _zuo.push(e.timeStamp)
-        });
-        $("div#you.fangxiang").click(function (e) {
-            _you.push(e.timeStamp)
         });
         
         $("#xiaopen").click(function (e) {
@@ -93,10 +90,10 @@
         });
 
         $("div#danqizuo").click(function (e) {
-            _danqizuo=push(e.timeStamp)
+            _dzuo=push(e.timeStamp)
         });
         $("div#danqiyou").click(function (e) {
-            _danqiyou=push(e.timeStamp)
+            _dyou=push(e.timeStamp)
         });
         $("#piaoyi").click(function (e) {
             _piaoyi.push(e.timeStamp)
@@ -109,8 +106,7 @@
         });
 
         var datas={
-            danqizuo:_danqizuo,
-            danqiyou:_danqiyou,
+            danqizuo:_dzuo,
             piaoyi:_piaoyi,
             shache:_shache,
             zuo:_zuo,
